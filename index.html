@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Louis &amp; Françoise — Notre mariage</title>
+  <title>Françoise &amp; Louis — Notre mariage</title>
   <meta name="description" content="Invitation au mariage de Louis et Françoise.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="#accueil">F &amp; L</a>
+      <a class="brand" href="#accueil" aria-label="Accueil - Louis et Françoise">
+        <img class="brand-logo" src="images/logo-fl.svg" alt="Louis et Françoise">
+      </a>
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
       <div class="nav-links">
         <a href="#histoire">Notre histoire</a>
@@ -25,16 +27,18 @@
 
   <main>
     <section id="accueil" class="hero">
-      <div class="botanical botanical-left" aria-hidden="true"></div>
-      <div class="botanical botanical-right" aria-hidden="true"></div>
       <div class="hero-card">
-        <p class="eyebrow">Ensemble avec nos familles</p>
-        <h1>Louis <span>&amp;</span> Françoise</h1>
-        <p class="hero-subtitle">ont le plaisir de vous inviter à célébrer leur mariage</p>
-        <div class="ornament"></div>
+        <img class="hero-logo" src="images/logo-fl.svg" alt="Louis et Françoise">
+        <h1>Françoise <span>&amp;</span> Louis</h1>
+        <p class="hero-subtitle">ainsi que leurs familles, ont le plaisir de vous inviter à leur mariage</p>
         <p class="date">26 juin 2027</p>
         <p class="venue">BORINGE - Menthon-Saint-Bernard</p>
         <a class="button" href="#programme">Découvrir</a>
+        <div class="hero-gallery" aria-label="Photos de Louis et Françoise">
+          <img src="images/front_1.jpeg" alt="Louis et Françoise - photo 1">
+          <img src="images/front_2.jpeg" alt="Louis et Françoise - photo 2">
+          <img src="images/front_3.jpeg" alt="Louis et Françoise - photo 3">
+        </div>
       </div>
     </section>
 
@@ -57,12 +61,14 @@
         <h2>Deux journées à partager</h2>
         <div class="timeline">
           <h3 class="timeline-date">Samedi 26 juin 2027</h3>
-          <div class="timeline-item"><time>15h30</time><div><h3>La cérémonie</h3><p>Nous nous retrouverons à l’église de Menthon-Saint-Bernard pour célébrer notre mariage.</p></div></div>
-          <div class="timeline-item"><time>17h45</time><div><h3>Le vin d’honneur</h3><p>Direction Boringe, au bord du lac, pour trinquer ensemble et profiter des premières heures de cette belle journée.</p><p><em>29, route du Port · Menthon-Saint-Bernard</em></p></div></div>
-          <div class="timeline-item"><time>20h00</time><div><h3>Le dîner</h3><p>La soirée se poursuivra autour d’un repas assis, pour prendre le temps de partager un bon moment tous ensemble.</p></div></div>
-          <div class="timeline-item"><time>23h30</time><div><h3>La première danse</h3><p>Un dernier moment à deux avant d’ouvrir la piste et de faire durer la fête jusque tard dans la nuit.</p></div></div>
+          <div class="timeline-day">
+          <div class="timeline-item"><div class="timeline-marker" aria-hidden="true"><span><img src="images/ceremonie.svg" alt=""></span></div><time>15h30</time><div><h3>La cérémonie</h3><p>Nous nous retrouverons à l’église pour célébrer notre union</p><p><em>Eglise · Menthon-Saint-Bernard</em></p></div></div>
+          <div class="timeline-item"><div class="timeline-marker" aria-hidden="true"><span><img src="images/vin-honneur.svg" alt=""></span></div><time>17h45</time><div><h3>Le vin d’honneur</h3><p>Direction Boringe, au bord du lac, pour trinquer ensemble et lancer les festivités</p><p><em>29, route du Port · Menthon-Saint-Bernard</em></p></div></div>
+          <div class="timeline-item"><div class="timeline-marker" aria-hidden="true"><span><img src="images/diner.svg" alt=""></span></div><time>20h00</time><div><h3>Le dîner</h3><p>La soirée se poursuivra autour d’un repas assis, pour prendre le temps de partager un bon moment tous ensemble</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker" aria-hidden="true"><span><img src="images/danse.svg" alt=""></span></div><time>23h30</time><div><h3>La première danse</h3><p>Un dernier moment à deux avant d’ouvrir la piste et de faire durer la fête jusqu'au bout de la nuit</p></div></div>
+          </div>
           <h3 class="timeline-date">Dimanche 27 juin 2027</h3>
-          <div class="timeline-item"><time>11h00</time><div><h3>Le brunch</h3><p>Pour prolonger les festivités et se retrouver tranquillement autour d’un brunch, avant de se dire au revoir.</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker" aria-hidden="true"><span><img src="images/brunch.svg" alt=""></span></div><time>11h00</time><div><h3>Le brunch</h3><p>Après les émotions de la veille, retrouvons-nous pour un moment tout en douceur, autour d’un repas convivial avant de se dire au revoir </p></div></div>
         </div>
       </div>
     </section>
@@ -98,35 +104,28 @@
 
             <div class="travel-columns">
               <article class="travel-card">
-                <span class="travel-icon">🚗</span>
                 <h4>En voiture</h4>
+                <p class="travel-tip"><strong>Pensez au covoiturage !</strong> C’est aussi une bonne occasion de faire le trajet ensemble.</p>
                 <div class="travel-route"><h5>Depuis Paris</h5><p><strong>Environ 6 h à 7 h</strong><br>≈ 550–600 km</p><p>Autoroute A6 puis A40/A41 en direction d’Annecy.</p></div>
                 <div class="travel-route"><h5>Depuis Bruxelles</h5><p><strong>Environ 8 h à 9 h</strong><br>≈ 850–900 km</p><p>Autoroute via Reims, Dijon puis Lyon/Annecy.</p></div>
-                <p class="travel-tip">👉 <strong>Pensez au covoiturage !</strong> C’est aussi une bonne occasion de faire le trajet ensemble.</p>
+                <div class="travel-route parking-info"><h5>Où se garer ?</h5><p><strong>Parking de la route du Port</strong><br>230 route du Port<br>74290 Menthon-Saint-Bernard</p><p>Le parking se trouve à environ 200 m du lieu de réception. Il ne sera pas possible de se garer directement sur place.</p></div>
               </article>
 
               <article class="travel-card">
-                <span class="travel-icon">🚆</span>
                 <h4>En train</h4>
-                <div class="travel-route"><h5>Depuis Paris</h5><p><strong>Paris Gare de Lyon → Annecy</strong></p><p>🚄 <strong>Privilégiez les TGV directs</strong>, pour un trajet plus simple et plus serein.</p><p><strong>Environ 3 h 45 à 4 h 15</strong></p></div>
-                <div class="travel-route"><h5>Depuis Bruxelles</h5><p><strong>Bruxelles-Midi → Annecy</strong><br>🚄 <strong>Environ 6 h 15 à 7 h</strong></p><ul><li><strong>Via Paris :</strong> trajet généralement plus confortable, mais il faut <strong>changer de gare à Paris</strong> (Paris-Nord → Paris-Gare de Lyon).</li><li><strong>Via Lyon :</strong> pas de changement de gare, mais les trajets impliquent souvent <strong>deux TER</strong>, avec davantage de risque de correspondance manquée ou de retard.</li></ul></div>
-                <p class="travel-tip">👉 <strong>Dans les deux cas, prévoyez suffisamment de temps pour les correspondances.</strong></p>
+                <div class="travel-route"><h5>Depuis Paris</h5><p><strong>Paris Gare de Lyon → Annecy</strong></p><p><strong>Privilégiez les TGV directs</strong>, pour un trajet plus simple et plus serein.</p><p><strong>Environ 3 h 45 à 4 h 15</strong></p></div>
+                <div class="travel-route"><h5>Depuis Bruxelles</h5><p><strong>Bruxelles-Midi → Annecy</strong><br><strong>Environ 6 h 15 à 7 h</strong></p><ul><li><strong>Via Paris :</strong> trajet généralement plus confortable, mais il faut <strong>changer de gare à Paris</strong> (Paris-Nord → Paris-Gare de Lyon).</li><li><strong>Via Lyon :</strong> pas de changement de gare, mais les trajets impliquent souvent <strong>deux TER</strong>, avec davantage de risque de correspondance manquée ou de retard.</li></ul></div>
+                <div class="travel-route"><h5>D’Annecy à Menthon-Saint-Bernard</h5><p>Depuis Annecy, des bus rejoignent Menthon-Saint-Bernard environ une fois par heure. Il est également possible de terminer le trajet en taxi.</p></div>
               </article>
 
               <article class="travel-card">
-                <span class="travel-icon">✈️</span>
                 <h4>En avion</h4>
-                <div class="travel-route"><h5>Depuis Paris ou Bruxelles</h5><p>✈️ <strong>Paris / Bruxelles → Genève</strong></p><p>Vol direct d’environ <strong>1 h 10 à 1 h 15</strong>.</p><p>Depuis l’aéroport de Genève, des <strong>navettes permettent de rejoindre Annecy</strong>.</p></div>
+                <div class="travel-route"><h5>Depuis Paris ou Bruxelles</h5><p><strong>Paris / Bruxelles → Genève</strong></p><p>Vol direct d’environ <strong>1 h 10 à 1 h 15</strong>.</p><p>Depuis l’aéroport de Genève, des <strong>navettes permettent de rejoindre Annecy</strong>.</p></div>
+                <div class="travel-route"><h5>D’Annecy à Menthon-Saint-Bernard</h5><p>Depuis Annecy, des bus rejoignent Menthon-Saint-Bernard environ une fois par heure. Il est également possible de terminer le trajet en taxi.</p></div>
               </article>
             </div>
-
-            <div class="travel-last-leg"><h4>🚌 D’Annecy à Menthon-Saint-Bernard</h4><p>Une fois à <strong>Annecy</strong>, des bus rejoignent <strong>Menthon-Saint-Bernard environ une fois par heure</strong>.<br>Il est également possible de terminer le trajet en voiture ou en taxi.</p></div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="hebergement" class="section lodging">
       <div class="section-inner">
         <p class="eyebrow">Infos pratiques</p>
         <h2>Se loger</h2>
@@ -254,7 +253,7 @@
             </div>
 
             <p class="lodging-footer">
-              <strong>🚗 Depuis Annecy :</strong> comptez environ 20 à 25 minutes
+              <strong>Depuis Annecy :</strong> comptez environ 20 à 25 minutes
               en voiture jusqu'au lieu de réception, selon la circulation.
               Si vous venez en train sans voiture, pensez à prévoir votre retour
               après la soirée. Nous essaierons aussi de faciliter les covoiturages
