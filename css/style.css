@@ -32,9 +32,9 @@ a { color: inherit; text-decoration: none; }
 }
 .nav {
   max-width: 1100px;
-  min-height: 68px;
+  min-height: 56px;
   margin: auto;
-  padding: 0 28px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,7 +59,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero {
   min-height: 100vh;
-  padding: 110px 24px 70px;
+  padding: 70px 24px 24px;
   position: relative;
   overflow: hidden;
   display: grid;
@@ -70,16 +70,16 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 2;
   width: min(980px, 92vw);
-  padding: 82px 60px;
+  padding: 0px 60px 18px;
   text-align: center;
   background: transparent;
 }
 .hero-logo {
   display: block;
-  width: min(360px, 78%);
+  width: min(1330px, 96%);
   height: auto;
-  max-height: 150px;
-  margin: 0 auto 34px;
+  max-height: 490px;
+  margin: 18px auto 18px;
   object-fit: contain;
 }
 .hero-gallery {
@@ -110,15 +110,15 @@ h1, h2, h3 {
 h1 {
   margin: 0;
   font-family: "Parisienne", cursive;
-  font-size: clamp(58px, 8vw, 96px);
+  font-size: clamp(52px, 7vw, 84px);
   line-height: .9;
   letter-spacing: 0;
 }
 h1 span { color: var(--gold); font-weight: 400; }
-.hero-subtitle { max-width: 440px; margin: 26px auto; font-family: "The Seasons", serif; font-size: 21px; line-height: 1.45; }
-.ornament { width: 1px; height: 58px; margin: 28px auto; background: var(--line); }
-.date { margin: 0; color: var(--gold); font-family: "The Seasons", serif; font-size: 27px; letter-spacing: .08em; }
-.venue { margin: 4px 0 28px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.hero-subtitle { max-width: 440px; margin: 14px auto 18px; font-family: "The Seasons", serif; font-size: 21px; line-height: 1.45; }
+.ornament { width: 1px; height: 58px; margin: 18px auto; background: var(--line); }
+.date { margin: 0; color: var(--gold); font-family: "The Seasons", serif; font-size: 24px; letter-spacing: .08em; }
+.venue { margin: 4px 0 20px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
 .button {
   display: inline-block;
   padding: 11px 26px;
@@ -178,7 +178,7 @@ h1 span { color: var(--gold); font-weight: 400; }
 footer { padding: 35px 20px; text-align: center; background: var(--paper-2); color: var(--ink); font-family: "Cormorant Garamond", serif; letter-spacing: .1em; }
 
 @media (max-width: 760px) {
-  .nav { min-height: 60px; }
+  .nav { min-height: 52px; }
   .nav-toggle { display: block; }
   .nav-links {
     display: none;
@@ -191,9 +191,9 @@ footer { padding: 35px 20px; text-align: center; background: var(--paper-2); col
     border-bottom: 1px solid var(--line);
   }
   .nav-links.open { display: flex; }
-  .hero { padding-top: 90px; }
-  .hero-card { padding: 46px 25px 60px; }
-  .hero-logo { width: min(300px, 90%); max-height: 120px; margin-bottom: 28px; }
+  .hero { padding-top: 62px; }
+  .hero-card { padding: 0 25px 18px; }
+  .hero-logo { width: min(620px, 90%); max-height: 270px; margin-bottom: 14px; }
   .hero-gallery { gap: 8px; margin: 32px 0 0; }
   .hero-gallery img { border-width: 4px; }
   .hero-subtitle { font-size: 19px; }
