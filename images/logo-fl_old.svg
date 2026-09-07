@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 84" role="img" aria-labelledby="title desc">
+  <title id="title">Louis et Françoise</title>
+  <desc id="desc">Monogramme F et L</desc>
+  <rect width="240" height="84" fill="none"/>
+  <g fill="#F2E9E1" font-family="Georgia, serif" font-size="46" font-weight="400" letter-spacing="3">
+    <text x="56" y="57">F</text>
+    <text x="139" y="57">L</text>
+  </g>
+  <path d="M117 18v48" stroke="#F2E9E1" stroke-width="1"/>
+  <circle cx="120" cy="42" r="2.5" fill="#F2E9E1"/>
+</svg>
