@@ -5,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Françoise &amp; Louis — Notre mariage</title>
   <meta name="description" content="Invitation au mariage de Louis et Françoise.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("pageshow", () => {
+      if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="opening-active">
+  <button class="opening-screen" type="button" aria-label="Découvrir le site">
+    <span class="opening-panel opening-panel-left"><img src="images/opening.jpeg" alt=""></span>
+    <span class="opening-panel opening-panel-right"><img src="images/opening.jpeg" alt=""></span>
+  </button>
+
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="#accueil" aria-label="Accueil - Louis et Françoise">
@@ -25,6 +37,12 @@
     </nav>
   </header>
 
+  <aside class="rsvp-reminder" aria-label="Rappel pour la réponse au mariage">
+    <p>Réponse souhaitée au plus tard le <strong>30 novembre 2026</strong></p>
+    <a class="rsvp-reminder-link" href="#rsvp">Répondre</a>
+    <button class="rsvp-reminder-close" type="button" aria-label="Masquer le rappel RSVP">×</button>
+  </aside>
+
   <main>
     <section id="accueil" class="hero">
       <div class="hero-card">
@@ -33,14 +51,33 @@
         <p class="hero-subtitle">ainsi que leurs familles, ont le plaisir de vous inviter à leur mariage</p>
         <p class="date">26 juin 2027</p>
         <p class="venue">BORINGE - Menthon-Saint-Bernard</p>
-        <a class="button" href="#programme">Découvrir</a>
-        <div class="hero-gallery" aria-label="Photos de Louis et Françoise">
-          <img src="images/front_1.jpeg" alt="Louis et Françoise - photo 1">
-          <img src="images/front_2.jpeg" alt="Louis et Françoise - photo 2">
-          <img src="images/front_3.jpeg" alt="Louis et Françoise - photo 3">
+        <div class="hero-gallery-frame">
+          <button class="gallery-arrow gallery-previous" type="button" aria-label="Photos précédentes" disabled>&lsaquo;</button>
+          <div class="hero-gallery" role="group" aria-label="Galerie de 11 photos de Louis et Françoise" tabindex="0">
+            <img class="gallery-photo" src="images/front_1.jpeg" alt="Louis et Françoise - photo 1">
+            <img class="gallery-photo" src="images/front_2.jpg" alt="Louis et Françoise - photo 2">
+            <img class="gallery-photo" src="images/front_3.jpg" alt="Louis et Françoise - photo 3">
+            <img class="gallery-photo" src="images/front_4.jpg" alt="Louis et Françoise - photo 4">
+            <img class="gallery-photo" src="images/front_5.jpeg" alt="Louis et Françoise - photo 5">
+            <img class="gallery-photo" src="images/front_6.jpg" alt="Louis et Françoise - photo 6">
+            <img class="gallery-photo" src="images/front_7.jpeg" alt="Louis et Françoise - photo 7">
+            <img class="gallery-photo" src="images/front_8.jpg" alt="Louis et Françoise - photo 8">
+            <img class="gallery-photo" src="images/front_9.jpeg" alt="Louis et Françoise - photo 9">
+            <img class="gallery-photo" src="images/front_10.jpg" alt="Louis et Françoise - photo 10">
+            <img class="gallery-photo" src="images/front_11.jpg" alt="Louis et Françoise - photo 11">
+          </div>
+          <button class="gallery-arrow gallery-next" type="button" aria-label="Photos suivantes">&rsaquo;</button>
         </div>
       </div>
     </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Fermer la photo">×</button>
+      <button class="lightbox-arrow lightbox-previous" type="button" aria-label="Photo précédente">&lsaquo;</button>
+      <img class="lightbox-image" src="" alt="" draggable="false">
+      <button class="lightbox-arrow lightbox-next" type="button" aria-label="Photo suivante">&rsaquo;</button>
+      <span class="lightbox-counter" aria-live="polite"></span>
+    </div>
 
     <section id="histoire" class="section story">
       <div class="section-inner narrow">
@@ -78,7 +115,33 @@
         <p class="eyebrow">L’ambiance</p>
         <h2>Code couleur</h2>
         <div class="divider"></div>
-        <p>[Indications éventuelles sur les couleurs à privilégier]</p>
+        <p class="palette-description">Aucun dress code n’est requis ; si vous le souhaitez, ces teintes peuvent vous inspirer pour vous accorder à l’ambiance de la journée.</p>
+        <ul class="color-palette" aria-label="Palette de couleurs du mariage">
+          <li class="color-swatch" style="--swatch-color: #E8D7D6;">
+            <span class="color-name">Rose Poudré</span>
+            <span class="color-value">#E8D7D6</span>
+          </li>
+          <li class="color-swatch" style="--swatch-color: #B07A8C;">
+            <span class="color-name">Vieux Rose</span>
+            <span class="color-value">#B07A8C</span>
+          </li>
+          <li class="color-swatch color-swatch-light-text" style="--swatch-color: #5B1E2D;">
+            <span class="color-name">Bourgogne</span>
+            <span class="color-value">#5B1E2D</span>
+          </li>
+          <li class="color-swatch color-swatch-light-text" style="--swatch-color: #6D89A8;">
+            <span class="color-name">Bleu Grisé</span>
+            <span class="color-value">#6D89A8</span>
+          </li>
+          <li class="color-swatch" style="--swatch-color: #9BAA95;">
+            <span class="color-name">Vert Sauge</span>
+            <span class="color-value">#9BAA95</span>
+          </li>
+          <li class="color-swatch color-swatch-light-text" style="--swatch-color: #6E8476;">
+            <span class="color-name">Vert Eucalyptus</span>
+            <span class="color-value">#6E8476</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -267,7 +330,7 @@
       <div class="section-inner narrow">
         <p class="eyebrow">Répondez-nous</p>
         <h2>Serez-vous des nôtres ?</h2>
-        <p>Merci de nous confirmer votre présence avant le [DATE LIMITE].</p>
+        <p>Merci de nous confirmer votre présence au plus tard le 30 novembre 2026.</p>
         <!-- Remplacer # par l'URL de votre Google Form -->
         <a class="button button-dark" href="#" target="_blank" rel="noopener">Répondre à l'invitation</a>
       </div>
