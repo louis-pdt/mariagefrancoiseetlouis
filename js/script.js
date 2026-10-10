@@ -81,7 +81,7 @@ const showLightboxPhoto = index => {
   const photos = getGalleryPhotos();
   if (!lightbox || !lightboxImage || photos.length === 0) return;
   currentPhotoIndex = (index + photos.length) % photos.length;
-  lightboxImage.src = photos[currentPhotoIndex].src;
+  lightboxImage.src = photos[currentPhotoIndex].dataset.fullSrc || photos[currentPhotoIndex].src;
   lightboxImage.alt = photos[currentPhotoIndex].alt;
   if (lightboxCounter) lightboxCounter.textContent = `${currentPhotoIndex + 1} / ${photos.length}`;
   const singlePhoto = photos.length < 2;
