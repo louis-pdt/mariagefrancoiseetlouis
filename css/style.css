@@ -390,8 +390,16 @@ h1 span { color: var(--gold); font-weight: 400; }
 .timeline-item p { margin: 5px 0 0; }
 
 .code-couleur { background: #fff; }
-.code-couleur { color: #000; }
-.code-couleur .eyebrow { color: #000; }
+.code-couleur,
+.code-couleur .eyebrow,
+.code-couleur .section-inner h2,
+.code-couleur .palette-description,
+.code-couleur .color-value {
+  color: var(--ink);
+}
+.code-couleur .divider {
+  background: var(--gold);
+}
 .color-palette {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
